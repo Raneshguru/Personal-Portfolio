@@ -5,6 +5,9 @@ import {
   Presentation, MonitorSmartphone, GraduationCap, BookOpen, 
   Users, Brush, Medal, Award, Instagram, Github, Mail
 } from 'lucide-react';
+import raneImg from './assets/rane.png';
+import clubWebsiteImg from './assets/Club Website.PNG';
+import resumePdf from './assets/Ranesh Guru S_BTech _(IT)_2026_7.8CGPA _UIUX_Designer,Graphic_Designer.pdf';
 
 const WhatsAppIcon = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -262,7 +265,7 @@ export default function App() {
               </a>
             ))}
             <a 
-              href="src/assets/Ranesh Guru S_BTech _(IT)_2026_7.8CGPA _UIUX_Designer,Graphic_Designer.pdf" 
+              href={resumePdf} 
               target="_blank" 
               rel="noreferrer" 
               className="px-5 py-2.5 rounded-full text-sm font-bold transition-all hoverable hover:opacity-90 shadow-[0_0_15px_rgba(255,255,255,0.4)]"
@@ -293,7 +296,7 @@ export default function App() {
               </a>
             ))}
             <a 
-              href="/path-to-your-resume.pdf" 
+              href={resumePdf} 
               target="_blank" 
               rel="noreferrer"
               onClick={() => setMobileMenuOpen(false)}
@@ -340,7 +343,7 @@ export default function App() {
               <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[var(--bg-main)] to-transparent z-10 pointer-events-none"></div>
               
               <img 
-                src="src/assets/rane.png" 
+                src={raneImg} 
                 alt="Ranesh Guru" 
                 className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
               />
@@ -449,7 +452,7 @@ export default function App() {
 
             <div className="group relative rounded-2xl overflow-hidden glass border border-white/10 reveal hoverable flex flex-col">
               <div className="aspect-video relative overflow-hidden" style={{ backgroundColor: 'var(--bg-card)' }}>
-                <img src="src/assets/Club Website.PNG" alt="RACCUG Official Website" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-80 mix-blend-luminosity" />
+                <img src={clubWebsiteImg} alt="RACCUG Official Website" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-80 mix-blend-luminosity" />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500"></div>
               </div>
               <div className="p-8 relative flex-1 flex flex-col">
