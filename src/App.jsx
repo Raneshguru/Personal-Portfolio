@@ -242,18 +242,18 @@ export default function App() {
       <CustomCursor />
 
       <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-white/5 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
-        <div className="absolute top-[20%] right-[-10%] w-96 h-96 bg-white/5 rounded-full mix-blend-screen filter blur-[100px] animate-blob" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-[-20%] left-[20%] w-96 h-96 bg-white/5 rounded-full mix-blend-screen filter blur-[100px] animate-blob" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-[-10%] left-[-10%] w-64 h-64 md:w-96 md:h-96 bg-white/5 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+        <div className="absolute top-[20%] right-[-10%] w-64 h-64 md:w-96 md:h-96 bg-white/5 rounded-full mix-blend-screen filter blur-[100px] animate-blob" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-[-20%] left-[20%] w-64 h-64 md:w-96 md:h-96 bg-white/5 rounded-full mix-blend-screen filter blur-[100px] animate-blob" style={{ animationDelay: '4s' }}></div>
       </div>
 
       <header className={`fixed w-full top-0 z-50 transition-all duration-300 border-b ${isScrolled ? 'backdrop-blur-md border-white/10' : 'bg-transparent border-transparent'}`} style={{ backgroundColor: isScrolled ? 'var(--bg-main)' : 'transparent' }}>
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex justify-between items-center">
           <a href="#" className="flex flex-col hoverable group">
-            <span className="font-display font-bold text-xl tracking-tight text-[var(--text-main)] group-hover:text-gray-300 transition-colors">
+            <span className="font-display font-bold text-lg md:text-xl tracking-tight text-[var(--text-main)] group-hover:text-gray-300 transition-colors">
               Ranesh Guru S
             </span>
-            <span className="text-[10px] font-medium text-[var(--text-muted)] tracking-widest uppercase mt-0.5">
+            <span className="text-[8px] md:text-[10px] font-medium text-[var(--text-muted)] tracking-widest uppercase mt-0.5">
               UI/UX Designer
             </span>
           </a>
@@ -309,29 +309,29 @@ export default function App() {
       </header>
 
       {}
-      <section className="min-h-screen flex items-center justify-center pt-20 px-6 relative">
-        <div className="max-w-5xl mx-auto w-full flex flex-col md:flex-row items-center gap-12">
+      <section className="min-h-screen flex items-center justify-center pt-24 md:pt-20 px-4 md:px-6 relative">
+        <div className="max-w-5xl mx-auto w-full flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="flex-1 text-left z-10">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass mb-6 animate-fade-in-up border border-white/20">
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
               <span className="text-xs font-medium text-[var(--text-muted)] tracking-wide uppercase">Open to Opportunities</span>
             </div>
             
-            <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.1] mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               Hi, I'm Ranesh.<br />I specialize in <br />
               <span className="text-gradient typing-container min-h-[1.2em] inline-block">{typedRole}</span>
             </h1>
             
-            <p className="text-[var(--text-muted)] text-lg md:text-xl max-w-lg mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <p className="text-[var(--text-muted)] text-base md:text-lg lg:text-xl max-w-lg mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               A dedicated UI/UX and Graphic Designer with a strong passion for creating intuitive digital experiences and visually engaging brand identities.
             </p>
             
-            <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-              <a href="#work" className="px-8 py-4 rounded-full font-semibold transition-all hoverable flex items-center gap-2 group hover:opacity-80" style={{ backgroundColor: 'var(--accent)', color: 'var(--accent-text)' }}>
-                Explore Work <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              <a href="#work" className="px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all hoverable flex items-center justify-center sm:justify-start gap-2 group hover:opacity-80 text-sm sm:text-base" style={{ backgroundColor: 'var(--accent)', color: 'var(--accent-text)' }}>
+                Explore Work <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="https://www.linkedin.com/in/raneshguru" target="_blank" rel="noreferrer" className="px-8 py-4 rounded-full glass font-semibold hover:bg-white/10 transition-all hoverable flex items-center gap-2 text-[var(--text-main)]">
-                <Linkedin className="w-5 h-5" /> Connect
+              <a href="https://www.linkedin.com/in/raneshguru" target="_blank" rel="noreferrer" className="px-6 sm:px-8 py-3 sm:py-4 rounded-full glass font-semibold hover:bg-white/10 transition-all hoverable flex items-center justify-center gap-2 text-[var(--text-main)] text-sm sm:text-base">
+                <Linkedin className="w-4 sm:w-5 h-4 sm:h-5" /> Connect
               </a>
             </div>
           </div>
@@ -366,68 +366,68 @@ export default function App() {
       </section>
 
       {}
-      <section id="services" className="py-24 px-6 relative" style={{ backgroundColor: 'var(--bg-alt)' }}>
+      <section id="services" className="py-16 md:py-24 px-4 md:px-6 relative" style={{ backgroundColor: 'var(--bg-alt)' }}>
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 reveal">
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">My <span className="text-gradient">Expertise</span></h2>
-            <p className="text-[var(--text-muted)]">Delivering comprehensive solutions from concept to deployment.</p>
+          <div className="text-center mb-12 md:mb-16 reveal">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">My <span className="text-gradient">Expertise</span></h2>
+            <p className="text-[var(--text-muted)] text-sm md:text-base">Delivering comprehensive solutions from concept to deployment.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="glass p-8 rounded-2xl reveal hoverable group border border-white/10 hover:border-white/30 transition-all">
-              <div className="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-[#111] transition-all duration-300 text-[var(--text-main)]">
-                <Smartphone className="w-8 h-8" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div className="glass p-6 md:p-8 rounded-2xl reveal hoverable group border border-white/10 hover:border-white/30 transition-all">
+              <div className="w-12 md:w-14 h-12 md:h-14 rounded-xl bg-white/10 flex items-center justify-center mb-4 md:mb-6 group-hover:bg-white group-hover:text-[#111] transition-all duration-300 text-[var(--text-main)]">
+                <Smartphone className="w-6 md:w-8 h-6 md:h-8" />
               </div>
-              <h3 className="text-xl font-bold mb-3">UI/UX Design</h3>
-              <p className="text-[var(--text-muted)] text-sm leading-relaxed group-hover:text-white transition-colors">Designing intuitive, user-centric interfaces. I focus on creating seamless experiences through user research, wireframing, and interactive prototyping.</p>
+              <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3">UI/UX Design</h3>
+              <p className="text-[var(--text-muted)] text-xs md:text-sm leading-relaxed group-hover:text-white transition-colors">Designing intuitive, user-centric interfaces. I focus on creating seamless experiences through user research, wireframing, and interactive prototyping.</p>
             </div>
             
-            <div className="glass p-8 rounded-2xl reveal delay-100 hoverable group border border-white/10 hover:border-white/30 transition-all">
-              <div className="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-[#111] transition-all duration-300 text-[var(--text-main)]">
-                <MousePointer2 className="w-8 h-8" />
+            <div className="glass p-6 md:p-8 rounded-2xl reveal delay-100 hoverable group border border-white/10 hover:border-white/30 transition-all">
+              <div className="w-12 md:w-14 h-12 md:h-14 rounded-xl bg-white/10 flex items-center justify-center mb-4 md:mb-6 group-hover:bg-white group-hover:text-[#111] transition-all duration-300 text-[var(--text-main)]">
+                <MousePointer2 className="w-6 md:w-8 h-6 md:h-8" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Graphic Design</h3>
-              <p className="text-[var(--text-muted)] text-sm leading-relaxed group-hover:text-white transition-colors">Crafting visually striking brand identities, digital assets, and marketing materials using industry-leading Adobe Creative Cloud tools.</p>
+              <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3">Graphic Design</h3>
+              <p className="text-[var(--text-muted)] text-xs md:text-sm leading-relaxed group-hover:text-white transition-colors">Crafting visually striking brand identities, digital assets, and marketing materials using industry-leading Adobe Creative Cloud tools.</p>
             </div>
             
-            <div className="glass p-8 rounded-2xl reveal delay-200 hoverable group border border-white/10 hover:border-white/30 transition-all">
-              <div className="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-[#111] transition-all duration-300 text-[var(--text-main)]">
-                <Terminal className="w-8 h-8" />
+            <div className="glass p-6 md:p-8 rounded-2xl reveal delay-200 hoverable group border border-white/10 hover:border-white/30 transition-all">
+              <div className="w-12 md:w-14 h-12 md:h-14 rounded-xl bg-white/10 flex items-center justify-center mb-4 md:mb-6 group-hover:bg-white group-hover:text-[#111] transition-all duration-300 text-[var(--text-main)]">
+                <Terminal className="w-6 md:w-8 h-6 md:h-8" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Frontend Dev</h3>
-              <p className="text-[var(--text-muted)] text-sm leading-relaxed group-hover:text-white transition-colors">Bringing designs to life with clean, responsive code. Specializing in HTML, CSS, JavaScript, and building cross-platform apps with React Native.</p>
+              <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3">Frontend Dev</h3>
+              <p className="text-[var(--text-muted)] text-xs md:text-sm leading-relaxed group-hover:text-white transition-colors">Bringing designs to life with clean, responsive code. Specializing in HTML, CSS, JavaScript, and building cross-platform apps with React Native.</p>
             </div>
           </div>
         </div>
       </section>
 
       {}
-      <section id="work" className="py-24 px-6 relative">
+      <section id="work" className="py-16 md:py-24 px-4 md:px-6 relative">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 reveal">
             <div>
-              <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
-              <p className="text-[var(--text-muted)]">A showcase of problem-solving through design and code.</p>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Featured Projects</h2>
+              <p className="text-[var(--text-muted)] text-sm md:text-base">A showcase of problem-solving through design and code.</p>
             </div>
             <a href="https://www.linkedin.com/in/raneshguru" target="_blank" rel="noreferrer" className="hidden md:inline-flex items-center gap-2 hover:opacity-70 transition-colors mt-4 md:mt-0 hoverable text-[var(--text-main)]">
               View More on LinkedIn <ExternalLink className="w-4 h-4" />
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             <div className="group relative rounded-2xl overflow-hidden glass border border-white/10 reveal hoverable flex flex-col">
               <div className="aspect-video relative overflow-hidden" style={{ backgroundColor: 'var(--bg-card)' }}>
                 <img src="https://placehold.co/800x600/111111/ffffff?text=Bloodlink+Platform" alt="Bloodlink App" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-80 mix-blend-luminosity" />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500"></div>
               </div>
-              <div className="p-8 relative flex-1 flex flex-col">
-                <div className="flex gap-2 mb-4">
+              <div className="p-5 md:p-8 relative flex-1 flex flex-col">
+                <div className="flex flex-wrap gap-2 mb-3 md:mb-4">
                   <span className="text-xs font-semibold px-2.5 py-1 bg-white/10 rounded border border-white/20">UI/UX</span>
                   <span className="text-xs font-semibold px-2.5 py-1 bg-white/10 rounded border border-white/20">Web & Mobile</span>
                 </div>
-                <h3 className="font-display text-2xl font-bold mb-2">Bloodlink</h3>
-                <p className="text-[var(--text-muted)] text-sm mb-6 flex-1">A smart platform connecting blood donors and hospitals using real-time geolocation, tracking, and role-based access to ensure timely blood delivery.</p>
-                <a href="#" className="inline-flex items-center gap-2 text-sm font-semibold hover:opacity-70 transition-colors mt-auto">
-                  View Case Study <ArrowRight className="w-4 h-4" />
+                <h3 className="font-display text-xl md:text-2xl font-bold mb-2">Bloodlink</h3>
+                <p className="text-[var(--text-muted)] text-xs md:text-sm mb-4 md:mb-6 flex-1">A smart platform connecting blood donors and hospitals using real-time geolocation, tracking, and role-based access to ensure timely blood delivery.</p>
+                <a href="#" className="inline-flex items-center gap-2 text-xs md:text-sm font-semibold hover:opacity-70 transition-colors mt-auto">
+                  View Case Study <ArrowRight className="w-3 md:w-4 h-3 md:h-4" />
                 </a>
               </div>
             </div>
@@ -437,15 +437,15 @@ export default function App() {
                 <img src="https://placehold.co/800x600/151515/ffffff?text=Podcast+Plus" alt="Podcast Plus App" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-80 mix-blend-luminosity" />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500"></div>
               </div>
-              <div className="p-8 relative flex-1 flex flex-col">
-                <div className="flex gap-2 mb-4">
+              <div className="p-5 md:p-8 relative flex-1 flex flex-col">
+                <div className="flex flex-wrap gap-2 mb-3 md:mb-4">
                   <span className="text-xs font-semibold px-2.5 py-1 bg-white/10 rounded border border-white/20">React Native</span>
                   <span className="text-xs font-semibold px-2.5 py-1 bg-white/10 rounded border border-white/20">Redux</span>
                 </div>
-                <h3 className="font-display text-2xl font-bold mb-2">Podcast Plus</h3>
-                <p className="text-[var(--text-muted)] text-sm mb-6 flex-1">A custom podcast player built with React Native. Features an interactive UI, playback controls, theme customization, and smooth navigation.</p>
-                <a href="#" className="inline-flex items-center gap-2 text-sm font-semibold hover:opacity-70 transition-colors mt-auto">
-                  View Project <ArrowRight className="w-4 h-4" />
+                <h3 className="font-display text-xl md:text-2xl font-bold mb-2">Podcast Plus</h3>
+                <p className="text-[var(--text-muted)] text-xs md:text-sm mb-4 md:mb-6 flex-1">A custom podcast player built with React Native. Features an interactive UI, playback controls, theme customization, and smooth navigation.</p>
+                <a href="#" className="inline-flex items-center gap-2 text-xs md:text-sm font-semibold hover:opacity-70 transition-colors mt-auto">
+                  View Project <ArrowRight className="w-3 md:w-4 h-3 md:h-4" />
                 </a>
               </div>
             </div>
@@ -455,15 +455,15 @@ export default function App() {
                 <img src={clubWebsiteImg} alt="RACCUG Official Website" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-80 mix-blend-luminosity" />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500"></div>
               </div>
-              <div className="p-8 relative flex-1 flex flex-col">
-                <div className="flex gap-2 mb-4">
+              <div className="p-5 md:p-8 relative flex-1 flex flex-col">
+                <div className="flex flex-wrap gap-2 mb-3 md:mb-4">
                   <span className="text-xs font-semibold px-2.5 py-1 bg-white/10 rounded border border-white/20">Web Design</span>
                   <span className="text-xs font-semibold px-2.5 py-1 bg-white/10 rounded border border-white/20">HTML/CSS/JS</span>
                 </div>
-                <h3 className="font-display text-2xl font-bold mb-2">Rotaract Club of Covai User Group Official Site</h3>
-                <p className="text-[var(--text-muted)] text-sm mb-6 flex-1">A responsive and interactive platform developed to showcase community projects, activities, and events for the Rotaract Club of Covai User Group.</p>
-                <a href="https://raccug.in" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold hover:opacity-70 transition-colors mt-auto">
-                  Visit Live Site <ArrowRight className="w-4 h-4" />
+                <h3 className="font-display text-xl md:text-2xl font-bold mb-2">Rotaract Club of Covai User Group Official Site</h3>
+                <p className="text-[var(--text-muted)] text-xs md:text-sm mb-4 md:mb-6 flex-1">A responsive and interactive platform developed to showcase community projects, activities, and events for the Rotaract Club of Covai User Group.</p>
+                <a href="https://raccug.in" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-xs md:text-sm font-semibold hover:opacity-70 transition-colors mt-auto">
+                  Visit Live Site <ArrowRight className="w-3 md:w-4 h-3 md:h-4" />
                 </a>
               </div>
             </div>
@@ -473,15 +473,15 @@ export default function App() {
                 <img src="https://placehold.co/800x600/2a2a2a/ffffff?text=Chatbot+Interface" alt="Chatbot UI" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-80 mix-blend-luminosity" />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500"></div>
               </div>
-              <div className="p-8 relative flex-1 flex flex-col">
-                <div className="flex gap-2 mb-4">
+              <div className="p-5 md:p-8 relative flex-1 flex flex-col">
+                <div className="flex flex-wrap gap-2 mb-3 md:mb-4">
                   <span className="text-xs font-semibold px-2.5 py-1 bg-white/10 rounded border border-white/20">UI Development</span>
                   <span className="text-xs font-semibold px-2.5 py-1 bg-white/10 rounded border border-white/20">JavaScript</span>
                 </div>
-                <h3 className="font-display text-2xl font-bold mb-2">Interactive Chatbot UI</h3>
-                <p className="text-[var(--text-muted)] text-sm mb-6 flex-1">Designed and developed a responsive chatbot layout simulating real-time conversation flow, focusing heavily on seamless user interaction.</p>
-                <a href="#" className="inline-flex items-center gap-2 text-sm font-semibold hover:opacity-70 transition-colors mt-auto">
-                  View Details <ArrowRight className="w-4 h-4" />
+                <h3 className="font-display text-xl md:text-2xl font-bold mb-2">Interactive Chatbot UI</h3>
+                <p className="text-[var(--text-muted)] text-xs md:text-sm mb-4 md:mb-6 flex-1">Designed and developed a responsive chatbot layout simulating real-time conversation flow, focusing heavily on seamless user interaction.</p>
+                <a href="#" className="inline-flex items-center gap-2 text-xs md:text-sm font-semibold hover:opacity-70 transition-colors mt-auto">
+                  View Details <ArrowRight className="w-3 md:w-4 h-3 md:h-4" />
                 </a>
               </div>
             </div>
@@ -490,11 +490,11 @@ export default function App() {
       </section>
 
       {}
-      <section id="experience" className="py-24 px-6 relative" style={{ backgroundColor: 'var(--bg-alt)' }}>
+      <section id="experience" className="py-16 md:py-24 px-4 md:px-6 relative" style={{ backgroundColor: 'var(--bg-alt)' }}>
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16 reveal">
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">Professional <span className="text-gradient">Journey</span></h2>
-            <p className="text-[var(--text-muted)]">My trajectory in design, education, and development.</p>
+          <div className="text-center mb-12 md:mb-16 reveal">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Professional <span className="text-gradient">Journey</span></h2>
+            <p className="text-[var(--text-muted)] text-sm md:text-base">My trajectory in design, education, and development.</p>
           </div>
           
           <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/20 before:to-transparent">
@@ -558,23 +558,23 @@ export default function App() {
       </section>
 
       {}
-      <section id="leadership" className="py-24 px-6 relative">
+      <section id="leadership" className="py-16 md:py-24 px-4 md:px-6 relative">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 reveal">
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">Leadership & <span className="text-gradient">Impact</span></h2>
-            <p className="text-[var(--text-muted)]">Awards and community leadership roles I am proud of.</p>
+          <div className="text-center mb-12 md:mb-16 reveal">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Leadership & <span className="text-gradient">Impact</span></h2>
+            <p className="text-[var(--text-muted)] text-sm md:text-base">Awards and community leadership roles I am proud of.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="glass border border-white/10 p-8 rounded-2xl reveal hoverable flex flex-col justify-between hover:border-white/30 transition-all group">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            <div className="glass border border-white/10 p-6 md:p-8 rounded-2xl reveal hoverable flex flex-col justify-between hover:border-white/30 transition-all group">
               <div>
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-[#111] transition-colors text-[var(--text-main)]">
-                  <Users className="w-6 h-6" />
+                <div className="w-10 md:w-12 h-10 md:h-12 rounded-full bg-white/10 flex items-center justify-center mb-4 md:mb-6 group-hover:bg-white group-hover:text-[#111] transition-colors text-[var(--text-main)]">
+                  <Users className="w-5 md:w-6 h-5 md:h-6" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Club Leadership</h3>
-                <p className="text-[var(--text-muted)] text-sm leading-relaxed mb-6 group-hover:text-white">Serving as <strong>President</strong> (2025-26) and former International Service Director for the Rotaract Club of Covai User Group, driving impactful community initiatives.</p>
+                <h3 className="text-lg md:text-xl font-bold mb-3">Club Leadership</h3>
+                <p className="text-[var(--text-muted)] text-xs md:text-sm leading-relaxed mb-4 md:mb-6 group-hover:text-white">Serving as <strong>President</strong> (2025-26) and former International Service Director for the Rotaract Club of Covai User Group, driving impactful community initiatives.</p>
               </div>
-              <div className="pt-4 border-t border-white/10">
+              <div className="pt-3 md:pt-4 border-t border-white/10">
                 <span className="text-xs font-bold uppercase tracking-wider">Best Board Member Award</span>
               </div>
             </div>
@@ -622,30 +622,30 @@ export default function App() {
       </section>
 
       {}
-      <section id="contact" className="py-24 px-6 relative overflow-hidden" style={{ backgroundColor: 'var(--bg-alt)' }}>
-        <div className="max-w-4xl mx-auto glass border border-white/10 rounded-3xl p-8 md:p-16 relative z-10 reveal">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">Let's build something <br /> <span className="text-gradient">extraordinary.</span></h2>
-            <p className="text-[var(--text-muted)]">Feel free to reach out for collaborations or opportunities.</p>
+      <section id="contact" className="py-16 md:py-24 px-4 md:px-6 relative overflow-hidden" style={{ backgroundColor: 'var(--bg-alt)' }}>
+        <div className="max-w-4xl mx-auto glass border border-white/10 rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-16 relative z-10 reveal">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Let's build something <br /> <span className="text-gradient">extraordinary.</span></h2>
+            <p className="text-[var(--text-muted)] text-sm md:text-base">Feel free to reach out for collaborations or opportunities.</p>
             <a href="mailto:raneshguru2005@gmail.com" className="inline-block mt-4 font-semibold border-b border-white hover:opacity-70 transition-colors pb-1">raneshguru2005@gmail.com</a>
           </div>
 
           <form className="space-y-6" onSubmit={handleFormSubmit}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-[var(--text-muted)] mb-2">Name</label>
-                <input type="text" id="name" required className="w-full bg-white/5 border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:border-white transition-colors hoverable text-[var(--text-main)]" placeholder="Your Name" />
+                <label htmlFor="name" className="block text-xs md:text-sm font-medium text-[var(--text-muted)] mb-2">Name</label>
+                <input type="text" id="name" required className="w-full bg-white/5 border border-white/20 rounded-lg md:rounded-xl px-4 py-2.5 md:py-3 text-sm md:text-base focus:outline-none focus:border-white transition-colors hoverable text-[var(--text-main)]" placeholder="Your Name" />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-[var(--text-muted)] mb-2">Email</label>
-                <input type="email" id="email" required className="w-full bg-white/5 border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:border-white transition-colors hoverable text-[var(--text-main)]" placeholder="you@example.com" />
+                <label htmlFor="email" className="block text-xs md:text-sm font-medium text-[var(--text-muted)] mb-2">Email</label>
+                <input type="email" id="email" required className="w-full bg-white/5 border border-white/20 rounded-lg md:rounded-xl px-4 py-2.5 md:py-3 text-sm md:text-base focus:outline-none focus:border-white transition-colors hoverable text-[var(--text-main)]" placeholder="you@example.com" />
               </div>
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-[var(--text-muted)] mb-2">Message</label>
-              <textarea id="message" rows="4" required className="w-full bg-white/5 border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:border-white transition-colors hoverable resize-none text-[var(--text-main)]" placeholder="Tell me about your project..."></textarea>
+              <label htmlFor="message" className="block text-xs md:text-sm font-medium text-[var(--text-muted)] mb-2">Message</label>
+              <textarea id="message" rows="4" required className="w-full bg-white/5 border border-white/20 rounded-lg md:rounded-xl px-4 py-2.5 md:py-3 text-sm md:text-base focus:outline-none focus:border-white transition-colors hoverable resize-none text-[var(--text-main)]" placeholder="Tell me about your project..."></textarea>
             </div>
-            <button type="submit" className="w-full py-4 rounded-xl font-bold text-lg hover:opacity-80 transition-colors hoverable" style={{ backgroundColor: 'var(--accent)', color: 'var(--accent-text)' }}>
+            <button type="submit" className="w-full py-3 md:py-4 rounded-lg md:rounded-xl font-bold text-base md:text-lg hover:opacity-80 transition-colors hoverable" style={{ backgroundColor: 'var(--accent)', color: 'var(--accent-text)' }}>
               Send Message
             </button>
           </form>
@@ -659,10 +659,10 @@ export default function App() {
       </section>
 
       {}
-      <footer className="border-t border-white/10 py-12 px-6 text-center">
+      <footer className="border-t border-white/10 py-8 md:py-12 px-4 md:px-6 text-center">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-left">
-            <p className="text-[var(--text-muted)] text-sm">&copy; 2026 Ranesh Guru S. All rights reserved.</p>
+            <p className="text-[var(--text-muted)] text-xs md:text-sm">&copy; 2026 Ranesh Guru S. All rights reserved.</p>
             <p className="text-[var(--text-muted)] text-xs mt-1">UI/UX Designer, Graphic Designer & Frontend Developer</p>
           </div>
           
