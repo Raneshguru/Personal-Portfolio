@@ -310,7 +310,7 @@ export default function App() {
 
       {}
       <section className="min-h-screen flex items-center justify-center pt-24 md:pt-20 px-4 md:px-6 relative">
-        <div className="max-w-5xl mx-auto w-full flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div className="max-w-5xl mx-auto w-full flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
           <div className="flex-1 text-left z-10">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass mb-6 animate-fade-in-up border border-white/20">
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
