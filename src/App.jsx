@@ -281,35 +281,44 @@ export default function App() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="fixed inset-0 z-50 bg-[var(--bg-main)]/95 backdrop-blur-sm overflow-y-auto">
-            <div className="relative max-w-lg mx-auto h-full px-6 py-8 sm:px-8 flex flex-col gap-8">
-              <button className="absolute top-5 right-5 text-[var(--text-main)] hoverable p-2 rounded-full border border-white/10 bg-black/10" onClick={() => setMobileMenuOpen(false)}>
+          <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xl overflow-y-auto">
+            <div className="relative mx-auto h-full max-w-md px-6 py-8 flex flex-col gap-10">
+              <button className="absolute top-5 right-5 text-[var(--text-main)] hoverable p-2 rounded-full border border-white/15 bg-white/10 shadow-xl backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)}>
                 <X className="w-6 h-6" />
               </button>
 
-              <div className="mt-12 pt-2">
-                {['About', 'Services', 'Work', 'Experience', 'Leadership'].map((item) => (
-                  <a 
-                    key={item} 
-                    href={`#${item.toLowerCase()}`} 
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block w-full text-left text-2xl font-display font-semibold tracking-tight text-[var(--text-main)] py-3 border-b border-white/10 hover:text-[var(--accent)] transition-colors"
-                  >
-                    {item}
-                  </a>
-                ))}
+              <div className="pt-4">
+                <p className="text-xs uppercase tracking-[0.4em] text-[var(--text-muted)] mb-3">Navigation</p>
+                <h2 className="text-3xl sm:text-4xl font-display font-bold text-white leading-tight">Discover the portfolio</h2>
               </div>
 
-              <div className="mt-auto">
+              <div className="glass rounded-[2rem] border border-white/10 bg-white/10 p-6 shadow-2xl backdrop-blur-xl">
+                <div className="space-y-4">
+                  {['About', 'Services', 'Work', 'Experience', 'Leadership'].map((item) => (
+                    <a 
+                      key={item} 
+                      href={`#${item.toLowerCase()}`} 
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block w-full rounded-3xl px-5 py-4 text-lg sm:text-xl font-display font-semibold text-[var(--text-main)] border border-white/10 bg-white/5 transition-all duration-300 hover:border-[var(--accent)] hover:bg-[var(--accent)]/10 hover:text-[var(--accent)]"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-auto space-y-4">
                 <a 
                   href={resumePdf} 
                   target="_blank" 
                   rel="noreferrer"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="inline-flex items-center justify-center w-full px-8 py-3 rounded-full font-semibold border border-[var(--accent)] text-[var(--accent)] bg-black/10 hover:bg-[var(--accent)] hover:text-[var(--accent-text)] transition-colors"
+                  className="inline-flex items-center justify-center w-full rounded-full bg-[var(--accent)] px-8 py-4 text-base font-semibold text-[var(--accent-text)] shadow-xl hover:scale-[1.01] transition-transform"
                 >
                   Hire Me
                 </a>
+
+                <p className="text-sm text-[var(--text-muted)] leading-relaxed">Quick links for a smooth mobile experience. Tap any section to jump straight into the work.</p>
               </div>
             </div>
           </div>
