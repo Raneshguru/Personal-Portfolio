@@ -275,35 +275,43 @@ export default function App() {
             </a>
           </nav>
 
-          <button className="md:hidden text-[var(--text-main)] hoverable p-2" onClick={() => setMobileMenuOpen(true)}>
+          <button className="md:hidden text-[var(--text-main)] hoverable p-2 border border-white/10 rounded-full" onClick={() => setMobileMenuOpen(true)}>
             <Menu className="w-6 h-6" />
           </button>
         </div>
 
         {mobileMenuOpen && (
-          <div className="fixed inset-0 backdrop-blur-md z-50 flex flex-col items-center justify-center gap-8" style={{ backgroundColor: 'var(--bg-main)' }}>
-            <button className="absolute top-6 right-6 text-[var(--text-main)] hoverable p-2" onClick={() => setMobileMenuOpen(false)}>
-              <X className="w-8 h-8" />
-            </button>
-            {['About', 'Services', 'Work', 'Experience', 'Leadership'].map((item) => (
-              <a 
-                key={item} 
-                href={`#${item.toLowerCase()}`} 
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-2xl font-display font-semibold hover:opacity-70 transition-colors text-[var(--text-main)]"
-              >
-                {item}
-              </a>
-            ))}
-            <a 
-              href={resumePdf} 
-              target="_blank" 
-              rel="noreferrer"
-              onClick={() => setMobileMenuOpen(false)}
-              className="mt-4 px-8 py-3 rounded-full font-semibold border border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-[var(--accent-text)]"
-            >
-              Hire Me
-            </a>
+          <div className="fixed inset-0 z-50 bg-[var(--bg-main)]/95 backdrop-blur-sm overflow-y-auto">
+            <div className="relative max-w-lg mx-auto h-full px-6 py-8 sm:px-8 flex flex-col gap-8">
+              <button className="absolute top-5 right-5 text-[var(--text-main)] hoverable p-2 rounded-full border border-white/10 bg-black/10" onClick={() => setMobileMenuOpen(false)}>
+                <X className="w-6 h-6" />
+              </button>
+
+              <div className="mt-12 pt-2">
+                {['About', 'Services', 'Work', 'Experience', 'Leadership'].map((item) => (
+                  <a 
+                    key={item} 
+                    href={`#${item.toLowerCase()}`} 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block w-full text-left text-2xl font-display font-semibold tracking-tight text-[var(--text-main)] py-3 border-b border-white/10 hover:text-[var(--accent)] transition-colors"
+                  >
+                    {item}
+                  </a>
+                ))}
+              </div>
+
+              <div className="mt-auto">
+                <a 
+                  href={resumePdf} 
+                  target="_blank" 
+                  rel="noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="inline-flex items-center justify-center w-full px-8 py-3 rounded-full font-semibold border border-[var(--accent)] text-[var(--accent)] bg-black/10 hover:bg-[var(--accent)] hover:text-[var(--accent-text)] transition-colors"
+                >
+                  Hire Me
+                </a>
+              </div>
+            </div>
           </div>
         )}
       </header>
